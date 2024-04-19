@@ -1,0 +1,41 @@
+<div class="tax-info__wrapper">
+  @if (taxInfo) {
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Income Tax Results</mat-card-title>
+      </mat-card-header>
+      <div mat-card-image></div>
+      <mat-card-content class="tax-info__content">
+        <p class="tax-info__row">
+          Gross Annual Salary <strong> {{ taxInfo.grossAnnualSalary }}</strong>
+        </p>
+        <p class="tax-info__row">
+          Gross Monthly Salary
+          <strong> {{ taxInfo.grossMonthlySalary }}</strong>
+        </p>
+        <p class="tax-info__row">
+          Net Annual Salary <strong> {{ taxInfo.netAnnualSalary }}</strong>
+        </p>
+        <p class="tax-info__row">
+          Net Monthly Salary <strong> {{ taxInfo.netMonthlySalary }}</strong>
+        </p>
+        <p class="tax-info__row">
+          Annual Tax Paid <strong> {{ taxInfo.annualTaxPaid }}</strong>
+        </p>
+        <p class="tax-info__row">
+          Monthly Tax Paid <strong> {{ taxInfo.monthlyTaxPaid }}</strong>
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="tax-info__actions">
+        <button
+          mat-flat-button
+          color="primary"
+          routerLink="{{ TaxRoutes.HOME }}">
+          Back
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  } @else {
+    <p class="tax-info__no-info">No Task Info</p>
+  }
+</div>

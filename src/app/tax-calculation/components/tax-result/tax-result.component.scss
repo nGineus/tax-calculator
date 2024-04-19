@@ -1,0 +1,20 @@
+.tax-info {
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,7 @@
+<div class="tax-result">
+  @if (taxInfo$ | async; as taxInfo) {
+    <app-tax-input [isDisabled]="true" [value]="taxInfo.grossAnnualSalary">
+    </app-tax-input>
+    <app-tax-result [taxInfo]="taxInfo"></app-tax-result>
+  }
+</div>

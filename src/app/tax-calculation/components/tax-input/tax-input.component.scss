@@ -1,0 +1,13 @@
+:host {
+  width: 100%;
+}
+
+.tax-input {
+
+  &__field {
+
+    &--full-width {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<form [formGroup]="form" class="tax-input" (submit)="calculateTaxes($event)">
+  <mat-form-field class="tax-input__field--full-width">
+    <mat-label>Gross Annual Salary</mat-label>
+    <input
+      type="number"
+      matInput
+      formControlName="grossAnnualSalary"
+      placeholder="Enter value" />
+    @if (
+      grossAnnualSalaryFormControl.hasError('min') &&
+      !grossAnnualSalaryFormControl.hasError('required')
+    ) {
+      <mat-error>Value must be greater than 0</mat-error>
+    }
+    @if (grossAnnualSalaryFormControl.hasError('required')) {
+      <mat-error>This field is required</mat-error>
+    }
+    @if (!isDisabled) {
+      <button mat-button matSuffix color="primary" type="submit">Calc</button>
+    }
+  </mat-form-field>
+</form>
