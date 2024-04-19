@@ -31,6 +31,7 @@ export class TaxService {
       netAnnualSalary: grossAnnualSalary - annualTaxPaid,
       netMonthlySalary: +((grossAnnualSalary - annualTaxPaid) / 12).toFixed(2),
       monthlyTaxPaid: +(annualTaxPaid / 12).toFixed(2),
+      currencyCode: 'GBP',
     };
   }
 }

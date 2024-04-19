@@ -7,32 +7,54 @@
       <div mat-card-image></div>
       <mat-card-content class="tax-info__content">
         <p class="tax-info__row">
-          Gross Annual Salary <strong> {{ taxInfo.grossAnnualSalary }}</strong>
+          Gross Annual Salary
+          <strong>
+            {{
+              taxInfo.grossAnnualSalary | currency: taxInfo.currencyCode
+            }}</strong
+          >
         </p>
         <p class="tax-info__row">
           Gross Monthly Salary
-          <strong> {{ taxInfo.grossMonthlySalary }}</strong>
+          <strong>
+            {{
+              taxInfo.grossMonthlySalary | currency: taxInfo.currencyCode
+            }}</strong
+          >
         </p>
         <p class="tax-info__row">
-          Net Annual Salary <strong> {{ taxInfo.netAnnualSalary }}</strong>
+          Net Annual Salary
+          <strong>
+            {{
+              taxInfo.netAnnualSalary | currency: taxInfo.currencyCode
+            }}</strong
+          >
         </p>
         <p class="tax-info__row">
-          Net Monthly Salary <strong> {{ taxInfo.netMonthlySalary }}</strong>
+          Net Monthly Salary
+          <strong>
+            {{
+              taxInfo.netMonthlySalary | currency: taxInfo.currencyCode
+            }}</strong
+          >
         </p>
         <p class="tax-info__row">
-          Annual Tax Paid <strong> {{ taxInfo.annualTaxPaid }}</strong>
+          Annual Tax Paid
+          <strong>
+            {{ taxInfo.annualTaxPaid | currency: taxInfo.currencyCode }}</strong
+          >
         </p>
         <p class="tax-info__row">
-          Monthly Tax Paid <strong> {{ taxInfo.monthlyTaxPaid }}</strong>
+          Monthly Tax Paid
+          <strong>
+            {{
+              taxInfo.monthlyTaxPaid | currency: taxInfo.currencyCode
+            }}</strong
+          >
         </p>
       </mat-card-content>
       <mat-card-actions class="tax-info__actions">
-        <button
-          mat-flat-button
-          color="primary"
-          routerLink="{{ TaxRoutes.HOME }}">
-          Back
-        </button>
+        <button mat-flat-button color="primary" (click)="goBack()">Back</button>
       </mat-card-actions>
     </mat-card>
   } @else {

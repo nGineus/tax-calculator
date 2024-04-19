@@ -5,4 +5,5 @@ export interface TaxInfo {
   netMonthlySalary: number;
   annualTaxPaid: number;
   monthlyTaxPaid: number;
+  currencyCode: string;
 }

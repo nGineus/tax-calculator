@@ -15,8 +15,7 @@ describe('TaxService', () => {
   };
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(TaxService);
+    service = new TaxService();
   });
 
   it('should be created', () => {
@@ -32,6 +31,7 @@ describe('TaxService', () => {
         netMonthlySalary: 416.67,
         monthlyTaxPaid: 0,
         annualTaxPaid: 0,
+        currencyCode: 'GBP',
       };
 
       const actualResult = service.calculateTax(5000, mockTaxConfiguration);
@@ -47,6 +47,7 @@ describe('TaxService', () => {
         netMonthlySalary: 1083.33,
         monthlyTaxPaid: 166.67,
         annualTaxPaid: 2000,
+        currencyCode: 'GBP',
       };
 
       const actualResult = service.calculateTax(15000, mockTaxConfiguration);
@@ -62,6 +63,7 @@ describe('TaxService', () => {
         netMonthlySalary: 0,
         monthlyTaxPaid: 0,
         annualTaxPaid: 0,
+        currencyCode: 'GBP',
       };
 
       const actualResult = service.calculateTax(0, mockTaxConfiguration);
@@ -77,6 +79,7 @@ describe('TaxService', () => {
         netMonthlySalary: 2416.67,
         monthlyTaxPaid: 916.67,
         annualTaxPaid: 11000,
+        currencyCode: 'GBP',
       };
 
       const actualResult = service.calculateTax(40000, mockTaxConfiguration);
